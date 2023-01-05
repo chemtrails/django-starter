@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight&display=swap');
+
+:root {
+    --dark: rgb(65, 65, 65);
+    --light: rgb(206, 206, 206);
+    --shadow: -5px 5px 20px 2px rgb(177, 177, 177);
+    --mint: rgb(122, 228, 205);
+    --background: transparent;
+    --form-width: 300px;
+    --form-font-size: 20px;
+    --edges: 5px;
+    --error-color: rgb(199, 41, 35);
+}
+
+html {
+    font-family: 'Inter Tight', sans-serif;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+}
+
+form {
+    width: var(--form-width);
+    padding: 20px 10px;
+    margin: 0 auto;
+    box-shadow: var(--shadow);
+    border-radius: var(--edges);
+    font-size: var(--form-font-size);
+    background: var(--background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    font-family: 'Inter Tight', sans-serif;
+}
+
+br {
+    display: none;
+}
+
+label {
+    display: none;
+}
+
+.helptext {
+    display: none;
+}
+
+input {
+    border: none;
+    outline: none;
+    color: var(--light);
+    font: inherit;
+    background: var(--dark);
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: width 0.5s;
+    width: 90%;
+    height: 60px;
+}
+
+.form-element {
+    margin: 10px auto;
+}
+
+input:focus {
+    width: 100%;
+}
+
+::selection {
+    background: var(--light);
+    color: var(--dark);
+}
+
+.dj-forms-btn {
+    border: none;
+    font: inherit;
+    border-radius: 5px;
+    background: var(--light);
+    color: var(--dark);
+    padding: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-sizing: border-box;
+    border: 5px solid transparent;
+    width: 90%;
+    transition: width 0.5s, border 0.1s;
+}
+
+.dj-forms-btn:hover {
+    border:5px solid var(--dark);
+    width: 100%;
+}
+
+::placeholder {
+    color: var(--shadow);
+}
+
+.error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 30px 0;
+    font-size: 25px;
+    width: 100%;
+    background-color: var(--error-color);
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.material-symbols-outlined {
+    cursor: pointer;
+    user-select: none;
+}

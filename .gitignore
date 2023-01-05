@@ -1,0 +1,4 @@
+db.sqlite3
+starter_app/__pycache__
+starter_app/migrations
+starter/__pycache__

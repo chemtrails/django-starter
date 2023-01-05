@@ -1,0 +1,21 @@
+.auth-buttons {
+    margin: 20vh auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+.auth-button {
+    border: 3px solid var(--dark);
+    border-radius: var(--edges);
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 5px;
+    transition: padding 0.5s ease;
+}
+
+.auth-button:hover {
+    padding: 10px 20px;
+}

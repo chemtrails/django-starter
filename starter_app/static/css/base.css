@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight&display=swap');
+
+:root {
+    --dark: rgb(65, 65, 65);
+    --light: rgb(206, 206, 206);
+    --shadow: -5px 5px 20px 2px rgb(177, 177, 177);
+    --mint: rgb(122, 228, 205);
+    --background: transparent;
+    --form-width: 300px;
+    --form-font-size: 20px;
+    --edges: 5px;
+    --error-color: rgb(199, 41, 35);
+}
+
+
+html {
+    font-family: 'Inter Tight', sans-serif;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    font: inherit;
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    width: 100%;
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+h1 {
+    width: fit-content;
+    margin: 20px auto;
+}

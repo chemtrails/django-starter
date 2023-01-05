@@ -1,4 +1,10 @@
 {% extends 'base.html' %}
+
+{% block head %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+
 {% block main %}
 <div class="auth-buttons">
     <a href="/login" class="auth-button">

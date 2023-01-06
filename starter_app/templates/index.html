@@ -7,6 +7,9 @@
 
 {% block main %}
 <div class="auth-buttons">
+    {% if user.is_authenticated %}
+    {{ user.username }}
+    {% else %}
     <a href="/login" class="auth-button">
         <div>
             Log in
@@ -17,5 +20,6 @@
             Sign up
         </div>
     </a>
+    {% endif %}
 </div>
 {% endblock %}

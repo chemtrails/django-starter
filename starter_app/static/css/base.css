@@ -4,7 +4,6 @@
     --dark: rgb(65, 65, 65);
     --light: rgb(206, 206, 206);
     --shadow: -5px 5px 20px 2px rgb(177, 177, 177);
-    --mint: rgb(122, 228, 205);
     --background: transparent;
     --form-width: 300px;
     --form-font-size: 20px;
@@ -32,14 +31,21 @@ a {
     width: 100%;
     box-shadow: var(--shadow);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 100px;
     text-transform: uppercase;
-    font-size: 30px;
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 
 h1 {
     width: fit-content;
     margin: 20px auto;
+}
+
+.logout {
+    border: 1px solid black;
+    padding: 5px;
+    box-sizing: border-box;
 }

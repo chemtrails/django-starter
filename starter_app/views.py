@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
-from django.contrib.auth import login, logout
-# Create your views here.
+from django.contrib import auth
+
 
 def index(request):
     return render(
@@ -10,42 +10,40 @@ def index(request):
     )
 
 def login(request):
-    err = False
+    form = None
     
     if request.method == 'POST':
-        form = AuthenticationForm(request.POST)
+        form = AuthenticationForm(request, data=request.POST)
         if form.is_valid():
+            auth.login(request, form.get_user())
             return redirect('index')
-        else:
-            err = True
-
+    
     return render(
         request,
         'registration/login.html',
         {
-            'error': err
+            'form': form
         }
     )
 
 def logout(request):
+    auth.logout(request)
     return redirect('index')
 
 def register(request):
-    err = False
+    form = None
 
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('index')
-        else:
-            err = True
 
     return render(
         request,
         'registration/register.html',
         {
-            'error': err
+            'form': form
         }
     )
     
